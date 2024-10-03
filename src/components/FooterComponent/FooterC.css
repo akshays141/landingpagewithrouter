@@ -1,0 +1,32 @@
+
+.footer-container{
+    width: 100%;
+    background: rgb(65, 65, 109);
+    color: #fff;
+    padding: 2em 4em;
+    line-height: 1.5em;
+}
+
+.f-section1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.f-section1 ul {
+    list-style: none;
+}
+
+.f-section1 ul h4{
+    margin-bottom: 0.5em;
+}
+
+.f-section1 ul li{
+    color:#ffffffa8;
+}
+
+.f-section2{
+    width: 100%;
+    margin: 1.2em 0;
+    padding: 1em 0;
+    background: #1a1b5e;
+}

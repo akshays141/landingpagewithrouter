@@ -2,31 +2,41 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} from 'react-router-dom';
-import Home from './components/HomeComponent/Home';
-import Products from './components/ProductsComponent/Products';
-import Cart from './components/CartComponent/Cart';
-import App from './App';
-import SignIn from './components/UserComponent/LogInComponent/SignIn';
-import AboutUs from './components/AboutUsComponent/AboutUs';
+import App from '../src/App';
+import ShopContextProvider from './Context/ShopContext';
+// import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} from 'react-router-dom';
+// import Home from './components/HomeComponent/Home';
+// import Products from './components/ProductComponent/Product';
+// import Cart from './components/CartComponent/Cart';
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path='/' element={<App/>} >
-      <Route path='home' element={<Home/>} />
-      <Route path='products' element={<Products/>} />
-      <Route path='aboutus' element={<AboutUs/>} />
-      <Route path='cart' element={<Cart/>} />
-      <Route path='signin' element={<SignIn/>} />
-    </Route>
-  )
-)
+// import SignIn from './components/UserComponent/LogInComponent/SignIn';
+// import AboutUs from './components/AboutUsComponent/AboutUs';
+
+
+
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+
+//     <Route path='/' element={<App/>} >
+
+//       <Route path='home' element={<Home/>} />
+//       <Route path='products' element={<Products/>} >
+//       <Route path=':productId' element={<Products/>}/>
+//       </Route>
+//       <Route path='aboutus' element={<AboutUs/>} />
+//       <Route path='cart' element={<Cart/>} />
+//       <Route path='signin' element={<SignIn/>} />
+//     </Route>
+//   )
+// )
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <ShopContextProvider>
+    <App />
+    </ShopContextProvider>
   </React.StrictMode>
 );
 

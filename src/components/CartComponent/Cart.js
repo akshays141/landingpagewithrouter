@@ -1,10 +1,13 @@
 import React from 'react';
 import './Cart.css';
+import CartItems from '../CartItems/CartItems';
 
 
 const Cart = () => {
   return (
-    <h2>Cart</h2>
+    <div>
+      <CartItems/>
+    </div>
   )
 }
 

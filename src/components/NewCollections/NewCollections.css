@@ -1,0 +1,62 @@
+.new-collections{
+    width: 100%;
+    margin: 2rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.new-collections h1{
+    color: rgb(17, 17, 75);
+}
+
+.new-collections hr{
+    height: 5px;
+    width: 8rem;
+    background: rgb(19, 19, 100);
+    align-self: center;
+}
+
+.new-collections .collections{
+    display: flex;
+    justify-content: left;
+   flex-wrap: wrap;
+   gap: 1rem;
+   margin-top: 1rem;
+   
+
+   
+}
+
+.collections .p-card{
+    width: 14rem;
+    background: #fff;
+    box-shadow: 2px 4px 5px #222222b9;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.collections .p-card:hover{
+    transform: scaleX(1.2);    
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.p-card img{
+    width: 12rem;
+    height:13rem ;
+}
+
+.p-card p{
+    padding: 1rem 1rem 0 1rem;
+}
+
+.p-card .product-prices{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 1rem 1.5rem;
+}

@@ -1,12 +1,158 @@
 
 
 .container{
-    height: 100vh;
-    background: #999;
+    width: 100%;
+    min-height: max-content;
 }
 
-.container h1{
-    position: relative;
-    top: 80px;
-    text-align: center;
+.hero-section{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(120deg, #dfdfdf 40%, #128 60% );
+    display: flex;   
+    /* margin: auto; */
+    
 }
+
+.hero-section .hero-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-left: 180px;
+    line-height: 1.1;
+
+}
+
+.hero-left h2{
+    font-size: 26px;
+    font-weight: 600;
+    color: #090909;
+}
+
+.hero-left p{
+    font-size: 50px;
+    font-weight: 600;
+    color: #171717;
+}
+
+.hero-hand-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-hand-icon img{
+    width: 50px;
+}
+
+.hero-latest-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 260px;
+    height: 60px;
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 75px;
+    background: #ff4545;
+    cursor: pointer;
+    color: white;
+}
+
+.hero-latest-btn:hover{
+    background: rgb(243, 3, 3);
+}
+
+.hero-section .hero-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.hero-right img{
+    width: 26rem;
+    height: 33rem;
+   
+}
+
+
+.feature-products{
+    width: 100%;
+    margin: 2rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.feature-products h1{
+    color: rgb(17, 17, 75);
+}
+
+.feature-products hr{
+    height: 5px;
+    width: 8rem;
+    background: rgb(19, 19, 100);
+    align-self: center;
+}
+
+.feature-products .p-cards{
+    display: flex;
+    justify-content: left;
+   flex-wrap: wrap;
+   gap: 1rem;
+   margin-top: 1rem;
+   
+}
+
+.p-cards .p-card{
+    width: 14rem;
+    background: #fff;
+    box-shadow: 2px 4px 5px #222222b9;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.p-cards .p-card:hover{
+    transform: scaleX(1.1);    
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.p-card img{
+    width: 12rem;
+    height:13rem ;
+}
+
+.p-card p{
+    padding: 1rem 1rem 0 1rem;
+}
+
+.p-card .product-prices{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 1rem 1.5rem;
+}
+
+.product-prices .new-price{
+font-size: 16px;
+font-weight: 500;
+}
+
+.product-prices .old-price{
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: #808080a6;
+}
+

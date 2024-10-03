@@ -16,6 +16,7 @@ nav{
 .logo{
     width: 60px;
     margin-left: 50px;
+    cursor: pointer;
 }
 
 .hamburger{
@@ -30,16 +31,27 @@ nav{
     background: #fff;
 }
 
-/* nav ul{
-    transition: 0.3s ease-in;
-} */
+
 
 ul a:hover{
-    color:brown;
+    color:rgb(207, 41, 41);
 }
 
 ul a.active{
-    color:brown;
+    color:rgb(219, 25, 25);
+}
+
+.cart-count{
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   padding: 3px 3px;
+   font-size: 12px;
+   background: red;
+   color: white;
+   position: relative;
+   top: -8px;
+   left: 1px;
 }
 
 nav ul li{
@@ -51,35 +63,76 @@ nav ul li{
 
 /*---- media query----- */
 
-@media (max-width: 700px){
-
-    .menu-link{
+@media (max-width: 720px) {
+   
+    .menu-link {
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
-        background: #212EA0;
+        display: flex;
+        flex-direction: column;
+       gap: 2rem;
+        align-items: center;
+        background: #0e1124;
         z-index: -1;
         width: 200px;
         padding-top: 70px;
         opacity: 0;
         visibility: hidden;
-        
+        transform: translateX(100%); /* Initially hidden by sliding off-screen */
+        transition: all 0.5s ease-in-out; /* Smooth transition */
     }
-
-    .menu-link.show{
+ 
+    /* Keyframe for slide-in and fade effect */
+    @keyframes slideIn {
+        0% {
+            transform: translateX(100%); /* Start off-screen */
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0); /* End position */
+            opacity: 1;
+        }
+    }
+ 
+    /* Keyframe for slide-out effect */
+    @keyframes slideOut {
+        0% {
+            transform: translateX(0); /* Initial visible position */
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(100%); /* Move off-screen */
+            opacity: 0;
+        }
+    }
+ 
+    .menu-link.show {
         opacity: 1;
         visibility: visible;
-        
+        z-index: 999; /*Bring to the front*/
+        transform: translateX(0); /* Slide in */
+        animation: slideIn 0.5s forwards; /* Apply slide-in animation */
     }
-
-    .hamburger{
+ 
+    .menu-link.hide {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        transform: translateX(100%); /* Slide out */
+        animation: slideOut 0.5s forwards; /* Apply slide-out animation */
+    }
+ 
+    .hamburger {
         opacity: 1;
         visibility: visible;
-     }
-
-    nav ul li{
-        display: block;
-        margin: 25px 40px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
     }
+ 
+    
+    /* .hamburger.active {
+        transform: rotate(90deg); 
+    } */
 }
