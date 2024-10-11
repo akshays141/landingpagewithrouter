@@ -8,6 +8,11 @@ import Product from '../src/components/ProductComponent/Product';
 import AboutUs from '../src/components/AboutUsComponent/AboutUs';
 import Cart from '../src/components/CartComponent/Cart';
 import SignIn from '../src/components/UserComponent/LogInComponent/SignIn';
+import CheckOut from './components/CheckOutComponent/CheckOut';
+import Registration from '../src/components/UserComponent/RegistrationComponent/Registration';
+import ProtectedCheckout from './components/CheckOutComponent/ProtectedCheckout';
+import Sucess from './components/Sucess';
+import Cancel from './components/Cancel';
 
 
 function App() {
@@ -22,8 +27,20 @@ function App() {
               <Route path=':productId' element={<Product/>} />
             </Route>
             <Route path='/aboutus' element={<AboutUs />} />
-            <Route path='/cart' element={<Cart />} />
+            <Route 
+            path='/cart' 
+            element={
+              <ProtectedCheckout>
+              <Cart />
+              </ProtectedCheckout>
+              } 
+              />
+            <Route path='/checkout' element={<CheckOut/>} />
             <Route path='/signin' element={<SignIn />} />
+            <Route path='/signup' element={<Registration/>} />
+            <Route path='/sucess' element={<Sucess/>} />
+            <Route path='/cancel' element={<Cancel/>} />
+
         </Routes>
         </div>  
         <FooterC />

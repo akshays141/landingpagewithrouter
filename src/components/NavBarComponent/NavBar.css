@@ -1,9 +1,10 @@
 
 nav{
     width: 100%;
-    background: #ffc70d; 
+    background: linear-gradient(160deg, #dfdfdf 20%,#dfdfdf ,#128 80%); 
     color:#fff;
-    padding: 10px 30px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.2);
+    padding: 7px 30px;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,7 +15,7 @@ nav{
 }
 
 .logo{
-    width: 60px;
+    width: 160px;
     margin-left: 50px;
     cursor: pointer;
 }
@@ -31,14 +32,21 @@ nav{
     background: #fff;
 }
 
+.hide-menu-icon{
+  z-index: 1000;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  display: none;
+}
 
 
 ul a:hover{
-    color:rgb(207, 41, 41);
+    color:rgb(244, 248, 5);
 }
 
 ul a.active{
-    color:rgb(219, 25, 25);
+    color:rgb(244, 248, 5);
 }
 
 .cart-count{
@@ -47,7 +55,7 @@ ul a.active{
    border-radius: 50%;
    padding: 3px 3px;
    font-size: 12px;
-   background: red;
+   background: rgb(250, 135, 59);
    color: white;
    position: relative;
    top: -8px;
@@ -61,7 +69,33 @@ nav ul li{
     font-size: 20px;
 }
 
+nav ul li button{
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    background: rgb(241, 5, 221);
+    color: #fff;
+}
+
 /*---- media query----- */
+
+
+@media (max-width:800px){
+    .logo{
+        margin-left:10px ;
+    }
+
+    nav ul{
+        margin: 5px 5px;
+        font-size: 14px;
+    }
+}
 
 @media (max-width: 720px) {
    
@@ -80,8 +114,8 @@ nav ul li{
         padding-top: 70px;
         opacity: 0;
         visibility: hidden;
-        transform: translateX(100%); /* Initially hidden by sliding off-screen */
-        transition: all 0.5s ease-in-out; /* Smooth transition */
+        /* transform: translateX(100%); 
+        transition: all 0.5s ease-in-out;  */
     }
  
     /* Keyframe for slide-in and fade effect */
@@ -114,8 +148,14 @@ nav ul li{
         z-index: 999; /*Bring to the front*/
         transform: translateX(0); /* Slide in */
         animation: slideIn 0.5s forwards; /* Apply slide-in animation */
+       
     }
  
+
+    .hide-menu-icon.show{
+        display: flex;
+    }
+
     .menu-link.hide {
         opacity: 0;
         visibility: hidden;

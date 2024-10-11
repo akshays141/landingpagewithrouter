@@ -1,7 +1,7 @@
 
 .offers{
     width: 85%;
-    height: 60vh;
+    /* height: 60vh; */
     display: flex;
     margin: auto;
     padding: 0 10rem;
@@ -53,4 +53,10 @@ align-items: center;
     width: 21rem;
     height: 26rem;
     
+}
+
+@media (max-width:840px){
+    .offers{
+        flex-direction: column;
+    }
 }

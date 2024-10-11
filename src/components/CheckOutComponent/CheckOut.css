@@ -1,0 +1,141 @@
+
+.checkout-container{
+width: 70%;
+margin: auto;
+display: flex;
+gap: 30px;
+}
+.shipping-address{
+    width: 55%;
+    background: #fff;
+    margin: 50px 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,.3);
+    border-radius: 5px;
+    padding: 50px;
+}
+
+.shipping-address h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.shipping-address p{
+    margin-bottom: 5px;
+    color: red;
+    
+}
+
+.shipping-address input{
+    width: 70%;
+    height: 40px;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.shipping-address .checkbox{
+    height: initial;
+    width: initial;
+}
+.payment-container{
+    width: 45%;
+}
+
+.payment-container .payment-method{
+    background:#fff;
+    margin: 50px 0 15px 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,.3);
+    border-radius: 5px;
+    padding: 50px;
+}
+.payment-method h3{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.payment-method .card{
+    width: 100%;
+    height: 50px;
+    padding:10px;
+    border: 1px solid #e5e5e5;
+    font-size: 18px;
+    font-weight: 500;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+.payment-method .card:hover{
+    background:#e5e5e569 ;
+}
+.payment-method .stripe{
+    width: 100%;
+    height: 50px;
+    padding:10px;
+    border: 1px solid #e5e5e5;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-method .stripe:hover{
+    background:#e5e5e569;
+}
+
+.payment-container .order-summary{
+    background: #fff;
+    text-align: start;
+    padding: 50px 50px 15px 50px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.3);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.order-summary h2{
+    margin-bottom: 10px;
+}
+.order-summary .subtotal{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.order-summary .shipping{
+display: flex;
+justify-content: space-between;
+margin-bottom: 15px;
+}
+
+.order-summary .subtotal p{
+    font-size: 18px;
+}
+.order-total{
+    height: 60px;
+    background:#eee;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.411);
+}
+.payment-container span{
+margin-left: 5px;
+
+}
+
+.payment-container button{
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    background: yellow;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.411);
+    cursor: pointer;
+}

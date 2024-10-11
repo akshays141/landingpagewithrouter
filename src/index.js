@@ -19,7 +19,7 @@ import ShopContextProvider from './Context/ShopContext';
 
 //     <Route path='/' element={<App/>} >
 
-//       <Route path='home' element={<Home/>} />
+//       <Route path='/' element={<Home/>} />
 //       <Route path='products' element={<Products/>} >
 //       <Route path=':productId' element={<Products/>}/>
 //       </Route>
